@@ -1,0 +1,14 @@
+.itemcontainer
+{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+flex-wrap: wrap;
+    background-color: rgb(223, 221, 221);
+    background: linear-gradient(white,rgb(228, 223, 223));
+    
+   
+}

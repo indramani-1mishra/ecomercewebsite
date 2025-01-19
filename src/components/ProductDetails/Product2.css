@@ -1,0 +1,64 @@
+.rajk
+{
+   
+    
+
+}
+.rajk div:nth-child(1)
+{
+    
+    width: 100%;
+}
+.rajk div:nth-child(1)>img
+{
+    width: 100%;
+}
+.rajs >h1,h2,p
+{
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 3px rgb(59, 35, 195);
+    background-color: rgb(228, 220, 220);
+}
+.span2
+{
+   
+    text-shadow: 0px 0px 3px rgb(21, 37, 50);
+    text-align: justify;
+    width: 100%;
+    background-color: rgb(228, 220, 220);
+}
+button
+{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(21, 37, 50);
+    color: rgb(228, 220, 220);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 0px 5px rgb(59, 35, 195);
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 30px;
+}
+@media(min-width:768px)
+{
+    .rajk div:nth-child(1)
+{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.rajk div:nth-child(1)>img
+{
+    width: 15%;
+}
+button
+{
+    margin-left: 45%;
+}
+}
