@@ -44,7 +44,7 @@
     width: 100%;
     height: 25%;
 }
-.detalis>p,span
+.detalis>p,.detalis>span
 {
     margin: 0;
     text-align: center;
@@ -98,7 +98,7 @@ h3{
     width: 100%;
     height: 40%;
 }
-.detalis>p,span
+.detalis>p,.detalis>span
 {
     margin: 0;
     text-align: center;

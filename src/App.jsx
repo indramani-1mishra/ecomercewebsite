@@ -3,9 +3,11 @@ import { Routes,Route } from 'react-router-dom'
 import './App.css'
 import Product from './components/Product/Product'
 import ProductDetails from './components/ProductDetails/ProductDetails'
+import Hoc from './components/Hoc/Hoc'
 
 function App() {
   
+   
 
   return (
     <>  
@@ -20,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default Hoc(App);

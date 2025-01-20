@@ -2,7 +2,7 @@ import Cards from "../Cards/Cards";
 import CustomComponet from "../CustomComponents/CustomComponet"
 import './Product.css';
 
-export default function Product() {
+ function Product() {
 
     const product =  CustomComponet('https://fakestoreapi.com/products');
 
@@ -27,3 +27,4 @@ export default function Product() {
     </>
   )
 }
+export default Product;
