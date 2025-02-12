@@ -19,7 +19,7 @@ import './Product.css';
                             rating={item.rating.rate}
                              count={item.rating.count} 
                              id={item.id}
-
+                              
                              />)}
                            
     </div>

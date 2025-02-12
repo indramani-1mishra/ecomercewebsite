@@ -1,0 +1,72 @@
+.cartContainerandpriceDetails
+{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.buttonandCartContainer
+{
+   
+    width: 60%;
+    
+   
+   
+}
+.cartContainer
+{
+   
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+.imageContainer
+{
+    width: 50%;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageContainer>img{
+    width: 40%;
+}
+.removebtn
+{
+    background-color: red;
+    position: relative;
+    bottom: 70px;
+    left: 20%;
+}
+
+.priceDetalis
+{
+   
+    width: 25%;
+    height: 300px;
+    position: fixed;
+    top:18%;
+    left: 66%;
+    box-shadow: 0px 0px 0px 2px rgb(51, 61, 73);
+}
+.sp
+{
+   width: 97%;
+ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   font-size: 20px;
+  text-transform: capitalize;
+  background-color: rgba(171, 219, 211, 0.712);
+  color: rgb(18, 18, 67);
+
+ letter-spacing: 5px;
+ text-shadow: 0px 0px 3px rgb(21, 37, 50);
+ font-weight: bold;
+  
+}

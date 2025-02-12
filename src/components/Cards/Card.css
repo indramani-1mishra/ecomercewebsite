@@ -7,7 +7,7 @@
 }
 .raj{
   
-    height: 400px;
+    height: 450px;
     width: 20%;
     display: flex;
     justify-content: center;
@@ -57,6 +57,18 @@
    background-color: rgb(228, 220, 220);
    
 }
+.detalis>button
+{
+   margin: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    
+}
 h3{
      
     margin: 0;
@@ -64,6 +76,58 @@ h3{
     text-align: center;
     font-size: 14px;
 }
+.categoryContainer
+{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 30px;
+}
+#addto
+{
+   margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background-color: #0f3cf1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 1px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-bottom: 10px;
+
+
+}
+.ratecount
+{
+   margin: 0;
+   padding: 0;
+}
+.popup
+{
+    position: absolute;
+    
+    top: 20%;
+    left: 40%;
+    width: 400px;
+    height: 150px;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.para1
+{
+ width: 70%;
+ border: 2px solid gray;
+}
+    
+
 @media(max-width:450px) {
     
     .raj{

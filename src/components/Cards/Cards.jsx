@@ -1,13 +1,21 @@
 import { useNavigate } from 'react-router-dom';
 import './Card.css';
+import { useDispatch } from 'react-redux';
+import { addTocart } from '../../Store/ReduxStore';
 
  function Cards({title,image,price,categery,rating,count,id}) {
     console.log(title+' '+image+' '+price);
-
-      const navigate = useNavigate();
+      const dispatch = useDispatch();
+     // const navigate = useNavigate();
     const handlclick = () => {
         
-        navigate(`/dis/${id}`);
+       // navigate(`/dis/${id}`);
+
+    }
+    const onClickHandler = () => {
+       
+      dispatch(addTocart({ id, image,price,categery,rating,count,title }));
+       alert(title+"added in cart successfully");
 
     }
 
@@ -23,6 +31,7 @@ import './Card.css';
         <p>Price: {price}</p>
         <span>Rating: {rating}</span>
         <span>Count: {count}</span>
+        <button onClick={onClickHandler}>add to cart</button>
        </div>
 </div>
     

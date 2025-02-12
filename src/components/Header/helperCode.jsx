@@ -1,10 +1,10 @@
 // Exporting categories with a named export
 export const categories = {
     0: 'All',
-    1: 'Electronics',
-    2: 'Clothing',
-    3: 'Home & Garden',
-    4: 'Sports & Outdoors',
+    1: 'electronics',
+    2: 'jewelery',
+    3: `men's clothing`,
+    4: `women's clothing`,
     5: 'Books',
     6: 'Toys',
     7: 'Movies & TV',
