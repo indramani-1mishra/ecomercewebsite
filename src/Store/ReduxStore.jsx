@@ -65,21 +65,47 @@ const searchSlice = createSlice({
       }
     }
   });
+
+  const loginSlice = createSlice({
+    name:'login',
+    initialState:{
+      user:"",
+      password:""
+    },
+    reducers:{
+      updateUser:(state,action)=>{
+        state.user=action.payload;
+      },
+      updatePassword:(state,action)=>{
+        state.password=action.payload;
+      },
+      logout:(state,action)=>{
+        state.user=action.payload;
+        state.password= action.payload;
+        state.user=""
+        state.password=""
+    }
+  }
+  })
+
 // Export actions from both slices
 export const { addTocart, removeToCart } = productSlice.actions;
 export const { updateSearchTerm } = searchSlice.actions;
 export const {updateCategory } = categorySlice.actions;
+export const {updatePassword,updateUser,logout} = loginSlice.actions;
 
 // Export reducers from both slices
 export const productReducer = productSlice.reducer;
 export const searchReducer = searchSlice.reducer;
 export const categoryReducer = categorySlice.reducer;
+export const loginReducer = loginSlice.reducer;
 
 // Configure Redux Store
 export const Store = configureStore({
   reducer: {
     products: productReducer,
     search: searchReducer,
-    category:categoryReducer // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if needed  // Add category reducer here if
+    category:categoryReducer ,
+    login:loginReducer
   }
 });

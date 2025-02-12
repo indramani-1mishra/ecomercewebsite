@@ -3,6 +3,7 @@ import { useAuth } from '../../AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 
 export default function DisplayDetails() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function DisplayDetails() {
   return (
     <>
       {IsLoggin ? (
-         <Product />
+        <Product/>
       ) : (
         <div>
           <h1>Please Login First</h1>

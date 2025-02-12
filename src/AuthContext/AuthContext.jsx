@@ -10,7 +10,7 @@ export default function AuthContextProvider({ children }) {
   // User aur password state define karna
   const [user, setUser] = useState(null);
   const [password1, setPass1] = useState('');
-  const [IsLoggin,setIsloging] = useState('');
+  const [IsLoggin,setIsloging] = useState(false);
 
   const login = (user) => {
     setUser(user);  // User ko set karna

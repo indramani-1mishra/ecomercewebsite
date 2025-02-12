@@ -12,6 +12,7 @@ import { InputProvider } from './InputContext/InputContext'
 import SearchDisplay from './components/SearchDisplay/SearchDisplay'
 import Header from './components/Header/Header'
 import CotegorywiseProduct from './components/category/CotegorywiseProduct'
+import UserDeatils from './components/UserDetails/UserDeatils'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/search' element={<SearchDisplay/>}/>
           <Route path='/header' element={<Header/>}/>
           <Route path='/cate'    element={<CotegorywiseProduct/>}/>
+           <Route path='/user' element={<UserDeatils/>}/>
 
           
 
@@ -36,7 +38,7 @@ function App() {
         </AuthContextProvider>
        
        </InputProvider>
-      
+    
     
     </>
   )

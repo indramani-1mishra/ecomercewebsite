@@ -9,13 +9,16 @@ import { categories, languages } from './helperCode';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { updateCategory, updateSearchTerm } from '../../Store/ReduxStore';
+//import { useAuth } from '../../AuthContext/AuthContext';
 
 export default function Header() {
   const counter = useSelector((state) => state.products.counter);
   const navigate = useNavigate();
   const [inputBoxValue, setInputvalue] = useState('');
   
-  const dispatch = useDispatch();
+      const dispatch = useDispatch();
+     const name = useSelector((state)=> state.login.user);
+  
 
 
   const onChangeHandler = (e) => {
@@ -39,6 +42,9 @@ export default function Header() {
 
   const handleClick = () => {
     navigate('/cart');
+  };
+  const handleClick1 = () => {
+    navigate('/user');
   };
 
 
@@ -95,9 +101,20 @@ export default function Header() {
           </span>
         </div>
 
-        <div className='sign'>
-          <span> hello, sign in</span>
-          <span>create account & list</span>
+        <div className='sign' onClick={handleClick1}>
+          {
+           name?(
+           <>
+           <span> hello , {name} </span>
+           
+           </>
+           ):
+           <>
+           <span> hello, sign in</span>
+           <span>create account & list</span> 
+           </>
+          
+          }
         </div>
 
         <div className='sign'>

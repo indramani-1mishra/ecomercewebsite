@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAuth } from "../../AuthContext/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { updatePassword, updateUser } from "../../Store/ReduxStore";
 
 export default function Login() {
   const [value, setValue] = useState('');
@@ -8,6 +10,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const { login, passwordlog ,setIsloging} = useAuth();
+  const dispatch =useDispatch();
 
   // onClick handler for login
   const onClickHandler = (e) => {
@@ -19,6 +22,8 @@ export default function Login() {
     setValue('');         
      
        setIsloging(true); 
+       dispatch(updatePassword(password));
+       dispatch(updateUser(value));
       // localStorage.setItem('token', value);
       // localStorage.setItem('isloging', true);
       // setIsloging(localStorage.setItem('isloggin', true));
