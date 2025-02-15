@@ -15,7 +15,7 @@ flex-wrap: wrap;
     background: linear-gradient(white,rgb(228, 223, 223));
  
    
-    border: 2px solid black;
+   
 }
 .raj2{
   
@@ -118,6 +118,10 @@ flex-wrap: wrap;
 .details1>p
 {
  margin: 0;
+}
+.fladf
+{
+    display: none;
 }
 
 
