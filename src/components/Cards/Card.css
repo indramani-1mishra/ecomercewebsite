@@ -186,4 +186,12 @@ h3
     overflow: hidden;
     height: 30px;
 }
+.detalis>p
+{
+    margin: 5px;
+}
+.detalis>button
+{
+  margin-top: 10px;  
+}
 }
