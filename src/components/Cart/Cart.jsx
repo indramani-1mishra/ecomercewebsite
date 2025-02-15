@@ -12,6 +12,7 @@ export default function Cart() {
      const removeCart1 = (id) => {
         dispatch(removeToCart(id));
     } 
+
     useEffect(() => {
         let total = 0;
         cartsId.forEach((cart) => {
