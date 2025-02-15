@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTocart } from '../../Store/ReduxStore';
 import DisplayDetails from '../Login/displayDetails';
+import './Categery.css';
 export default function CotegorywiseProduct() {
   const selectedCategory = useSelector((state) => state.category.category); // Selected category from Redux store
   const [categoryProduct, setCategory] = useState([]); // State to store category products
@@ -40,11 +41,11 @@ export default function CotegorywiseProduct() {
 
       {categoryProduct.length > 0 ? (
         categoryProduct.map((item) => (
-          <div className="raj" key={item.id}>
+          <div className="raj2" key={item.id}>
             <div className="imagec">
               <img src={item.image} alt={item.title} className="image" />
             </div>
-            <div className="details">
+            <div className="details1">
               <h3>{item.title}</h3>
               <p>Category: {item.category}</p>   
               <p>Price: ${item.price}</p>
