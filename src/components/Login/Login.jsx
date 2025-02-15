@@ -3,7 +3,7 @@ import { useAuth } from "../../AuthContext/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updatePassword, updateUser } from "../../Store/ReduxStore";
-
+import './Login.css';
 export default function Login() {
   const [value, setValue] = useState('');
   const [password, setPassword] = useState('');
@@ -37,7 +37,7 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div >
       <h2>Login</h2>
       {/* Form for login */}
       <form>
