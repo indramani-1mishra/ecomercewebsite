@@ -71,6 +71,10 @@
     margin-top: 5px;
     border-radius: 10px;
     text-transform: capitalize;
+    background-color: rgb(16, 96, 45);
+    border: none;
+    cursor: pointer;
+    color: white;
     
 }
 #addto
@@ -89,16 +93,7 @@ h3{
     font-size: 14px;
     overflow: hidden;
 }
-.categoryContainer
-{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin-top: 30px;
-}
+
 
 .ratecount
 {
@@ -125,6 +120,10 @@ h3{
  border: 2px solid gray;
 }
     
+.detalis>p
+{
+    margin: 5px;
+}
 
 @media(max-width:450px) {
     

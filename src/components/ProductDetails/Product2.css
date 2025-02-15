@@ -28,20 +28,7 @@
     width: 100%;
     background-color: rgb(228, 220, 220);
 }
-button
-{
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: rgb(21, 37, 50);
-    color: rgb(228, 220, 220);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0px 0px 5px rgb(59, 35, 195);
-    text-align: center;
-    margin-left: 30%;
-    margin-top: 30px;
-}
+
 @media(min-width:768px)
 {
     .rajk div:nth-child(1)

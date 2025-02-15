@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { addTocart } from "../../Store/ReduxStore";
 import DisplayDetails from "../Login/displayDetails";
+import './Search.css';
 
 export default function SearchDisplay() {
   const [categoryProduct, setCategory] = useState([]);  // State to hold category products
@@ -47,20 +48,18 @@ export default function SearchDisplay() {
     <div className="categoryContainer">
       {categoryProduct.length > 0 ? (
         categoryProduct.map((item) => (
-          <div className="raj" key={item.id}>
+          <div className="raj2" key={item.id}>
             <div className="imagec">
               <img src={item.image} alt={item.title} className="image" />
             </div>
-            <div className="details">
+            <div className="details1">
               <h3>{item.title}</h3>
               <p>Category: {inputData}</p>
               <p>Price: ${item.price}</p>
-             
-              <p className="para">
+                <p>
                 <span className="ratecount">Rating: {item.rating?.rate}</span> {/* Using optional chaining */}
                 <span className="ratecount">Count: {item.rating?.count}</span> {/* Using optional chaining */}
-              </p>
-             
+                </p>
               <button onClick={() => onClickHandler(item)} id="addto">Add to Cart</button>
             </div>
           </div>
