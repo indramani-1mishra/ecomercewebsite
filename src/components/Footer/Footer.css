@@ -165,10 +165,20 @@
 }
 
 @media (max-width:480px){
+    
+    
+    *{
+       
+       
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+    }
     .upperfooter{
         flex-direction: column;
         align-items: center;
         height: auto;
+        margin: 0;
+      
     }
     .leftcontainer{
         border-right: none;
@@ -177,6 +187,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px;
+        margin: 0;
         
     }
 
@@ -184,6 +195,7 @@
     .rightcontainer{
         flex-direction: column;
         width: 100%;
+        margin: 0;
     }
 
     .lowerfooter>ul
@@ -192,6 +204,7 @@
         align-items: center;
         margin-top: 1px;
         border-top: none;
+        margin: 0;
     }
 
 }
