@@ -164,3 +164,34 @@
     margin-right: 5px;
 }
 
+@media (max-width:480px){
+    .upperfooter{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .leftcontainer{
+        border-right: none;
+        border-bottom: 2px solid silver;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+
+    
+    .rightcontainer{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lowerfooter>ul
+    {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1px;
+        border-top: none;
+    }
+
+}
