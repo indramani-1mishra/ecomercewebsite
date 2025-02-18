@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { FaCartPlus, FaLocationDot } from 'react-icons/fa6';
 import { IoIosSearch } from 'react-icons/io';
 import './Header.css';
@@ -9,18 +9,32 @@ import { categories, languages } from './helperCode';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { updateCategory, updateSearchTerm } from '../../Store/ReduxStore';
+import GetCurrentWeatherData from './getCurrentWhetherData';
 //import { useAuth } from '../../AuthContext/AuthContext';
 
 export default function Header() {
   const counter = useSelector((state) => state.products.counter);
   const navigate = useNavigate();
   const [inputBoxValue, setInputvalue] = useState('');
+  const [latitude,SetLatitude]= useState('');
+  const [longitude,Setlongitude]= useState('');
+
   
       const dispatch = useDispatch();
      const name = useSelector((state)=> state.login.user);
   
-
-
+   useEffect(()=>
+  {
+    navigator.geolocation.getCurrentPosition((position) => {
+      SetLatitude(position.coords.latitude);
+      Setlongitude(position.coords.longitude);
+    },
+    (error) => {
+      console.log(error);
+    });
+  // console.log("hello"+currentLocation);
+  },[]);
+ 
   const onChangeHandler = (e) => {
     const value = e.target.value;
     setInputvalue(value);
@@ -48,6 +62,8 @@ export default function Header() {
   };
 
 
+
+
   return (
     <nav className='navcontainer'>
       <div className='imgc'>
@@ -56,7 +72,9 @@ export default function Header() {
       </div>
       <div className='locaton'>
         <div>
-          <span id='raksm'>delivering to sultanpur 228121</span>
+          <span id='raksm'>
+            <GetCurrentWeatherData lat={latitude} lon={longitude} />
+          </span>
         </div>
         <div>
           <span><FaLocationDot /></span>
