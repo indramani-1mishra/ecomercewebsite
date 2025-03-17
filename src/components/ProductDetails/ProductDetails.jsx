@@ -29,10 +29,8 @@ export default function ProductDetails() {
                 <p> price:${product.price}</p>
                 <p> categery:{product.category}</p>
                 <span className="span2">{product.description}</span>
-               
-    
                  </div>
-                 <button onClick={onClickHandler} className="button1">back to page</button> 
+                {/** <button onClick={onClickHandler} className="button1"  >back to page</button>  */}
             </div>
          )}
       

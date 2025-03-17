@@ -73,7 +73,7 @@ export default function Header() {
       <div className='locaton'>
         <div>
           <span id='raksm'>
-            <GetCurrentWeatherData lat={latitude} lon={longitude} />
+          <GetCurrentWeatherData lat={latitude} lon={longitude} />
           </span>
         </div>
         <div>

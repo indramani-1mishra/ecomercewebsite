@@ -11,7 +11,8 @@ import fiveImage from './image5.webp';
 
 const DemoCarousel = () => {
   return (
-    <Carousel infiniteLoop={true} showArrows={false} autoPlay={true} showThumbs={false}>
+    
+      <Carousel infiniteLoop={true} showArrows={false} autoPlay={true} showThumbs={false} >
       <div>
         <img src={firstImage} alt="Image 1" />
         <p className="legend">Product list 1</p>
@@ -33,6 +34,7 @@ const DemoCarousel = () => {
         <p className="legend">Product list 4</p>
       </div>
     </Carousel>
+ 
   );
 };
 
