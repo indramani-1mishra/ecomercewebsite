@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import './Footer.css';
-import { FaCcDiscover, FaCcVisa, FaGift, FaGithub, FaInstagram, FaSquareFacebook, FaToolbox, FaYoutube } from "react-icons/fa6";
-import { FaLinkedin, FaQuestionCircle } from "react-icons/fa";
-import { CiStar } from "react-icons/ci";
+import { address, contactInfo, data, footerActions, footerLinks, infoLinks, socialLinks } from "./helpercode";
+import { FaCcVisa } from "react-icons/fa"; 
+import { FaCcDiscover } from "react-icons/fa";
 
 export default function Footer() {
+  
   return (
     <div>
       <div className="upperfooter">
@@ -12,47 +13,42 @@ export default function Footer() {
            <div className="first"> 
                 <h3>About Us</h3>
              <ul>
-             <li><Link to="/">Contact Us</Link></li>
-             <li><Link to="/">About Us</Link></li>
-             <li><Link to="/">carries</Link></li>
-             <li><Link to="/">flipcart stories</Link></li>
-             <li><Link to="/">press</Link></li>
-             <li><Link to="/">coprative process</Link></li> 
+              {footerLinks.map((item,index)=>{return(
+                <li key={index}><Link to="/">{item}</Link></li>
+              )})}
              </ul>
            </div>
            <div className="first">
            <h3>About Us</h3>
-             <ul>
-             <li><Link to="/">Contact Us</Link></li>
-             <li><Link to="/">About Us</Link></li>
-             <li><Link to="/">carries</Link></li>
-             <li><Link to="/">flipcart stories</Link></li>
-             <li><Link to="/">press</Link></li>
-             <li><Link to="/">coprative process</Link></li> 
-             </ul>
-
+           <ul>
+        {data.map((item, index) => {
+         return (
+          <li key={index}>
+         <Link to="/">{item}</Link>
+         </li>
+          );
+          })}
+         </ul>
            </div>
            <div className="first">
            <h3>About Us</h3>
              <ul>
-             <li><Link to="/">Contact Us</Link></li>
-             <li><Link to="/">About Us</Link></li>
-             <li><Link to="/">carries</Link></li>
-             <li><Link to="/">flipcart stories</Link></li>
-             <li><Link to="/">press</Link></li>
-             <li><Link to="/">coprative process</Link></li> 
+             {infoLinks.map((item,index)=>{
+              return(
+                <li key={index}> <Link to="/">{item}</Link></li>
+              )
+             })}
              </ul>
 
            </div>
            <div className="first">
            <h3>About Us</h3>
              <ul>
-             <li><Link to="/">Contact Us</Link></li>
-             <li><Link to="/">About Us</Link></li>
-             <li><Link to="/">carries</Link></li>
-             <li><Link to="/">flipcart stories</Link></li>
-             <li><Link to="/">press</Link></li>
-             <li><Link to="/">coprative process</Link></li> 
+             {infoLinks.map((item,index)=>{
+              return(
+                <li key={index}> <Link to="/">{item}</Link></li>
+              )
+             })}
              </ul>
 
            </div>
@@ -62,32 +58,34 @@ export default function Footer() {
            <div  className="first">
           <h3>mail us</h3>
           <ul>
-            <li>Flipkart Internet Private Limited,</li>
-            
-            <li>Email: support@flipkart.com</li>
-            <li>Phone: +91 123 456 7890</li>
+             {contactInfo.map((item,index)=>{
+              return(
+                <li key={index}>{item}</li>
+              );
+             })}
           </ul>
           </div>
           <div className="rsecond">
             <h3>Social</h3>
             <ul >
-            <li><Link to="/"><FaSquareFacebook className="s" /></Link></li>
-            <li><Link to="/"><FaInstagram className="s" /></Link></li>
-            <li><Link to="/"><FaLinkedin className="s" /></Link></li>
-            <li><Link to="/"><FaGithub  className="s"/></Link></li>
-            
-            
-            
+            {socialLinks.map((item,index)=>{
+            return(
+              <li key={index}>
+              <Link to={item.path}>{item.icon}</Link>
+              </li>
+            );
+            })} 
             </ul>
           </div>
            </div>
            <div  className="first">
             <h3>Registered Office Address:</h3>
              <ul>
-             <li>Flipkart Internet Private Limited,</li>
-             <li>5th Floor, Ground Floor,</li>
-             <li>B-1, Sector 63,</li>
-             <li>Gurugram-301101, India.</li>
+              {address.map((item,index)=>{
+                return(
+                  <li key={index}>{item}</li>
+                )
+              })}
              </ul>
             
            </div>
@@ -95,18 +93,13 @@ export default function Footer() {
       </div>
       <div className="lowerfooter">
         <ul>
-            <li>
-                <Link to="/"> <FaToolbox  className="r"/> <span>became a sellor</span></Link>
-            </li>
-            <li>
-                <Link to="/"> <CiStar className="r"/> <span>advertise</span></Link>
-            </li>
-            <li>
-                <Link to="/"> <FaGift className="r"/> <span>gift card</span></Link>
-            </li>
-            <li>
-                <Link to="/"> <FaQuestionCircle className="r" /> <span>help center</span></Link>
-            </li>
+            {footerActions.map((item,index)=>{
+              return(
+                <li key={index}>
+                <Link to={item.path}><span> {item.icon} {item.text}</span></Link>
+                </li>
+              );
+            })}
             <li>
                  <span>© 2007-2025 Flipkart.com</span>
             </li>
